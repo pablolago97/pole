@@ -1,6 +1,7 @@
 
 package harassthegame;
 
+import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -108,4 +109,33 @@ public class Metodos {
    
         }
      }
+    
+    public int[] setNumeroCartas(){
+        int[] numeros = new int[9];
+        int contador = 0;
+        
+        while(contador <9){
+            Random r = new Random();
+            int na = r.nextInt(8) + 1;
+            int nvr = 0;
+            
+            for (int i = 0; i<9; i++){
+                if(numeros[i]==na){
+                    nvr++;
+                }
+            }
+            if (nvr<2){
+                numeros[contador]=na;
+                contador++;
+            }
+            
+        }
+        for (int i = 0;  i<9; i++){
+            System.out.println(numeros[i]+"");
+        
+    }
+        
+        return numeros;
+    
+}
 }

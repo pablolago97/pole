@@ -7,6 +7,7 @@ package harassthegame;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 /**
  *
@@ -14,23 +15,58 @@ import javax.swing.ImageIcon;
  */
 public class Game1 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form game1
-     */
+    private Metodos m = new Metodos();
+    private boolean cara = false;
+    private ImageIcon im1;
+    private ImageIcon im2;
+    private JButton[] ArrayBoton = new JButton [2];
+    private boolean primeraC = false;
     public Game1() {
         initComponents();
-        imagen1.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen2.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen3.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen4.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen5.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen6.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen7.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen8.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        imagen9.setIcon(new ImageIcon("src/images/rsz_logoreverso.png"));
-        Metodos m = new Metodos();
-        m.setRandomImages(imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9);
+        
     }
+    
+    private void setCartas(){
+        int []numeros = m.setNumeroCartas();
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[8]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[9]+".png")));
+        
+    }
+    
+    private void comprobar(JButton btn){
+        
+        if(!cara){
+            btn.setEnabled(false);
+            im1 = (ImageIcon) btn.getDisabledIcon();  
+            ArrayBoton [0]=btn;
+            cara = true;
+        }else{
+            btn.setEnabled(false);
+            im2 = (ImageIcon) btn.getDisabledIcon();
+            
+            primeraC = false;
+            
+        }
+      
+        
+    }
+      private void comparar(JButton ){
+            if(cara && primeraC){
+                if(im1.getDescription().compareTo(im2.getDescription())!=0){
+                    ArrayBoton[0].setEnabled(true);
+                    btn
+                }
+                cara = false;
+            }
+        }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,58 +96,157 @@ public class Game1 extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
+        imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen1.setBorder(null);
+        imagen1.setBorderPainted(false);
+        imagen1.setContentAreaFilled(false);
+        imagen1.setFocusable(false);
+        imagen1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen1MouseExited(evt);
+            }
+        });
         imagen1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen1ActionPerformed(evt);
             }
         });
 
+        imagen4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen4.setBorder(null);
+        imagen4.setBorderPainted(false);
+        imagen4.setContentAreaFilled(false);
+        imagen4.setFocusable(false);
+        imagen4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen4MouseExited(evt);
+            }
+        });
         imagen4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen4ActionPerformed(evt);
             }
         });
 
+        imagen7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen7.setBorder(null);
+        imagen7.setBorderPainted(false);
+        imagen7.setContentAreaFilled(false);
+        imagen7.setFocusable(false);
+        imagen7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen7MouseExited(evt);
+            }
+        });
         imagen7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen7ActionPerformed(evt);
             }
         });
 
+        imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen2.setBorder(null);
+        imagen2.setBorderPainted(false);
+        imagen2.setContentAreaFilled(false);
+        imagen2.setFocusable(false);
+        imagen2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen2MouseExited(evt);
+            }
+        });
         imagen2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen2ActionPerformed(evt);
             }
         });
 
+        imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen3.setBorder(null);
+        imagen3.setBorderPainted(false);
+        imagen3.setContentAreaFilled(false);
+        imagen3.setFocusable(false);
+        imagen3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen3MouseExited(evt);
+            }
+        });
         imagen3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen3ActionPerformed(evt);
             }
         });
 
+        imagen5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen5.setBorder(null);
+        imagen5.setBorderPainted(false);
+        imagen5.setContentAreaFilled(false);
+        imagen5.setFocusable(false);
         imagen5.setMaximumSize(new java.awt.Dimension(94, 94));
         imagen5.setMinimumSize(new java.awt.Dimension(94, 94));
         imagen5.setPreferredSize(new java.awt.Dimension(94, 94));
+        imagen5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen5MouseExited(evt);
+            }
+        });
         imagen5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen5ActionPerformed(evt);
             }
         });
 
+        imagen6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen6.setBorder(null);
+        imagen6.setBorderPainted(false);
+        imagen6.setContentAreaFilled(false);
+        imagen6.setFocusable(false);
+        imagen6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen6MouseExited(evt);
+            }
+        });
         imagen6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen6ActionPerformed(evt);
             }
         });
 
+        imagen8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen8.setBorder(null);
+        imagen8.setBorderPainted(false);
+        imagen8.setContentAreaFilled(false);
+        imagen8.setFocusable(false);
+        imagen8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen8MouseExited(evt);
+            }
+        });
         imagen8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen8ActionPerformed(evt);
             }
         });
 
+        imagen9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen9.setBorder(null);
+        imagen9.setBorderPainted(false);
+        imagen9.setContentAreaFilled(false);
+        imagen9.setFocusable(false);
         imagen9.setPreferredSize(new java.awt.Dimension(94, 94));
+        imagen9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen9MouseExited(evt);
+            }
+        });
         imagen9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen9ActionPerformed(evt);
@@ -202,40 +337,76 @@ public class Game1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen1ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen1);
     }//GEN-LAST:event_imagen1ActionPerformed
 
     private void imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen2ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen2);
     }//GEN-LAST:event_imagen2ActionPerformed
 
     private void imagen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen3ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen3);
     }//GEN-LAST:event_imagen3ActionPerformed
 
     private void imagen4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen4ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen4);
     }//GEN-LAST:event_imagen4ActionPerformed
 
     private void imagen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen5ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen5);
     }//GEN-LAST:event_imagen5ActionPerformed
 
     private void imagen6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen6ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen6);
     }//GEN-LAST:event_imagen6ActionPerformed
 
     private void imagen7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen7ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen7);
     }//GEN-LAST:event_imagen7ActionPerformed
 
     private void imagen8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen8ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen8);
     }//GEN-LAST:event_imagen8ActionPerformed
 
     private void imagen9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen9ActionPerformed
-        // TODO add your handling code here:
+        comprobar(imagen9);
     }//GEN-LAST:event_imagen9ActionPerformed
+
+    private void imagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen1MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen1MouseExited
+
+    private void imagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen2MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen2MouseExited
+
+    private void imagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen3MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen3MouseExited
+
+    private void imagen4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen4MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen4MouseExited
+
+    private void imagen5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen5MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen5MouseExited
+
+    private void imagen6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen6MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen6MouseExited
+
+    private void imagen7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen7MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen7MouseExited
+
+    private void imagen8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen8MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen8MouseExited
+
+    private void imagen9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen9MouseExited
+        comparar();
+    }//GEN-LAST:event_imagen9MouseExited
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton imagen1;
