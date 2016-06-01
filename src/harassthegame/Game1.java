@@ -5,6 +5,7 @@
  */
 package harassthegame;
 
+import java.util.Random;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -21,23 +22,119 @@ public class Game1 extends javax.swing.JFrame {
     private ImageIcon im2;
     private JButton[] ArrayBoton = new JButton [2];
     private boolean primeraC = false;
+    
     public Game1() {
-        initComponents();
+    initComponents();
+    setCartas();
         
     }
     
     private void setCartas(){
         int []numeros = m.setNumeroCartas();
+        int x = (int) (Math.random()*9);
+        if(x==1){
         imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
         imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
         imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
         imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
-        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
-        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
-        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
-        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[8]+".png")));
-        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[9]+".png")));
-        
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        }else if(x==2){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        }else if (x==3){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        }else if (x==4){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        }else if (x==5){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));    
+        }else if(x==6){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));  
+        }else if (x==7){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        }else if (x==8){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+            
+        }else if (x==9){
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png")));
+        } else{
+        imagen1.setDisabledIcon(new ImageIcon(getClass().getResource("../images/ctroll.png")));
+        imagen2.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[0]+".png")));
+        imagen3.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[1]+".png")));
+        imagen4.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[2]+".png")));
+        imagen5.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[3]+".png")));
+        imagen6.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[4]+".png")));
+        imagen7.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[5]+".png")));
+        imagen8.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[6]+".png")));
+        imagen9.setDisabledIcon(new ImageIcon(getClass().getResource("../images/c"+numeros[7]+".png"))); 
+            
+        }
     }
     
     private void comprobar(JButton btn){
@@ -47,25 +144,28 @@ public class Game1 extends javax.swing.JFrame {
             im1 = (ImageIcon) btn.getDisabledIcon();  
             ArrayBoton [0]=btn;
             cara = true;
+            primeraC = false;
         }else{
             btn.setEnabled(false);
             im2 = (ImageIcon) btn.getDisabledIcon();
-            
-            primeraC = false;
+            ArrayBoton[1] = btn;
+            primeraC = true;
             
         }
       
         
     }
-      private void comparar(JButton ){
+      private void comparar(){
             if(cara && primeraC){
                 if(im1.getDescription().compareTo(im2.getDescription())!=0){
                     ArrayBoton[0].setEnabled(true);
-                    btn
+                    ArrayBoton[1].setEnabled(true);
                 }
                 cara = false;
             }
         }
+
+
 
 
     /**
@@ -92,16 +192,15 @@ public class Game1 extends javax.swing.JFrame {
         imagen9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jLabel1.setText("jLabel1");
 
-        imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen1.setBorder(null);
         imagen1.setBorderPainted(false);
         imagen1.setContentAreaFilled(false);
         imagen1.setFocusable(false);
-        imagen1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen1MouseExited(evt);
@@ -113,12 +212,12 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen4.setBorder(null);
         imagen4.setBorderPainted(false);
         imagen4.setContentAreaFilled(false);
         imagen4.setFocusable(false);
-        imagen4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen4MouseExited(evt);
@@ -130,12 +229,12 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen7.setBorder(null);
         imagen7.setBorderPainted(false);
         imagen7.setContentAreaFilled(false);
         imagen7.setFocusable(false);
-        imagen7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen7MouseExited(evt);
@@ -147,12 +246,12 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen2.setBorder(null);
         imagen2.setBorderPainted(false);
         imagen2.setContentAreaFilled(false);
         imagen2.setFocusable(false);
-        imagen2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen2MouseExited(evt);
@@ -164,12 +263,12 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen3.setBorder(null);
         imagen3.setBorderPainted(false);
         imagen3.setContentAreaFilled(false);
         imagen3.setFocusable(false);
-        imagen3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen3MouseExited(evt);
@@ -181,7 +280,7 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen5.setBorder(null);
         imagen5.setBorderPainted(false);
         imagen5.setContentAreaFilled(false);
@@ -189,7 +288,7 @@ public class Game1 extends javax.swing.JFrame {
         imagen5.setMaximumSize(new java.awt.Dimension(94, 94));
         imagen5.setMinimumSize(new java.awt.Dimension(94, 94));
         imagen5.setPreferredSize(new java.awt.Dimension(94, 94));
-        imagen5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen5MouseExited(evt);
@@ -201,12 +300,12 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen6.setBorder(null);
         imagen6.setBorderPainted(false);
         imagen6.setContentAreaFilled(false);
         imagen6.setFocusable(false);
-        imagen6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen6MouseExited(evt);
@@ -218,12 +317,12 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen8.setBorder(null);
         imagen8.setBorderPainted(false);
         imagen8.setContentAreaFilled(false);
         imagen8.setFocusable(false);
-        imagen8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen8MouseExited(evt);
@@ -235,13 +334,13 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso.png"))); // NOI18N
+        imagen9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen9.setBorder(null);
         imagen9.setBorderPainted(false);
         imagen9.setContentAreaFilled(false);
         imagen9.setFocusable(false);
         imagen9.setPreferredSize(new java.awt.Dimension(94, 94));
-        imagen9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
         imagen9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 imagen9MouseExited(evt);

@@ -111,15 +111,15 @@ public class Metodos {
      }
     
     public int[] setNumeroCartas(){
-        int[] numeros = new int[9];
+        int[] numeros = new int[8];
         int contador = 0;
         
-        while(contador <9){
+        while(contador <8){
             Random r = new Random();
-            int na = r.nextInt(8) + 1;
+            int na = r.nextInt(4) + 1;
             int nvr = 0;
             
-            for (int i = 0; i<9; i++){
+            for (int i = 0; i<8; i++){
                 if(numeros[i]==na){
                     nvr++;
                 }
@@ -130,7 +130,7 @@ public class Metodos {
             }
             
         }
-        for (int i = 0;  i<9; i++){
+        for (int i = 0;  i<8; i++){
             System.out.println(numeros[i]+"");
         
     }

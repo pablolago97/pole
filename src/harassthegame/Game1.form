@@ -3,9 +3,6 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[800, 600]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -134,7 +131,7 @@
             <Component class="javax.swing.JButton" name="imagen1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -143,7 +140,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -154,7 +151,7 @@
             <Component class="javax.swing.JButton" name="imagen4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -163,7 +160,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -174,7 +171,7 @@
             <Component class="javax.swing.JButton" name="imagen7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -183,7 +180,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -194,7 +191,7 @@
             <Component class="javax.swing.JButton" name="imagen2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -203,7 +200,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -214,7 +211,7 @@
             <Component class="javax.swing.JButton" name="imagen3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -223,7 +220,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -234,7 +231,7 @@
             <Component class="javax.swing.JButton" name="imagen5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -242,17 +239,8 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[94, 94]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[94, 94]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[94, 94]"/>
-                </Property>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -263,7 +251,7 @@
             <Component class="javax.swing.JButton" name="imagen6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -272,7 +260,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -283,7 +271,7 @@
             <Component class="javax.swing.JButton" name="imagen8">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -292,7 +280,7 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -303,7 +291,7 @@
             <Component class="javax.swing.JButton" name="imagen9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -311,11 +299,8 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[94, 94]"/>
-                </Property>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/rsz_logoreverso_opt.png"/>
+                  <Image iconType="3" name="/imagenes_w_b/rsz_logoreverso_opt.png"/>
                 </Property>
               </Properties>
               <Events>
