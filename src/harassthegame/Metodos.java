@@ -8,7 +8,38 @@ import javax.swing.JButton;
 
 public class Metodos {
     
-    public void setRandomImages(JButton imagen1, JButton imagen2, JButton imagen3, JButton imagen4, JButton imagen5, JButton imagen6, JButton imagen7, JButton imagen8,JButton imagen9){
+        public int[] setNumeroCartas(){
+        int[] numeros = new int[8];
+        int contador = 0;
+        
+        while(contador <8){
+            Random r = new Random();
+            int na = r.nextInt(4) + 1;
+            int nvr = 0;
+            
+            for (int i = 0; i<8; i++){
+                if(numeros[i]==na){
+                    nvr++;
+                }
+            }
+            if (nvr<2){
+                numeros[contador]=na;
+                contador++;
+            }
+            
+        }
+        for (int i = 0;  i<8; i++){
+            System.out.println(numeros[i]+"");
+        
+    }
+        
+        return numeros;
+    
+}
+        
+        
+    
+   /* public void setRandomImages(JButton imagen1, JButton imagen2, JButton imagen3, JButton imagen4, JButton imagen5, JButton imagen6, JButton imagen7, JButton imagen8,JButton imagen9){
        int numero = (int) (Math.random()*9+1);
     if(numero==1){
         imagen1.setIcon(new ImageIcon("src/images/troll_opt.jpg"));
@@ -108,34 +139,7 @@ public class Metodos {
         imagen9.setIcon(new ImageIcon("src/images/troll_opt.jpg"));
    
         }
-     }
+     }*/
     
-    public int[] setNumeroCartas(){
-        int[] numeros = new int[8];
-        int contador = 0;
-        
-        while(contador <8){
-            Random r = new Random();
-            int na = r.nextInt(4) + 1;
-            int nvr = 0;
-            
-            for (int i = 0; i<8; i++){
-                if(numeros[i]==na){
-                    nvr++;
-                }
-            }
-            if (nvr<2){
-                numeros[contador]=na;
-                contador++;
-            }
-            
-        }
-        for (int i = 0;  i<8; i++){
-            System.out.println(numeros[i]+"");
-        
-    }
-        
-        return numeros;
-    
-}
+
 }

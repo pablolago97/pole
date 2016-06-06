@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package harassthegame;
 
-/**
- *
- * @author oracle
- */
+import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
+
+
 public class Game3 extends javax.swing.JFrame {
 
     /**
@@ -16,6 +15,16 @@ public class Game3 extends javax.swing.JFrame {
      */
     public Game3() {
         initComponents();
+        ((JPanel) getContentPane()).setOpaque(false);
+        ImageIcon imagen = new ImageIcon(this.getClass().getResource("../imagenes_uso_ur/tienda.png"));
+        JLabel fondo = new JLabel();
+        fondo.setIcon(imagen);
+        getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
+        fondo.setBounds(0, 0, 800, 600);
+        this.add(fondo, BorderLayout.CENTER);
+        this.setSize(800, 600);
+        this.setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -37,7 +46,7 @@ public class Game3 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 621, Short.MAX_VALUE)
         );
 
         pack();
