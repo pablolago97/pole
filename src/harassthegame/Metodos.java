@@ -1,12 +1,20 @@
 
 package harassthegame;
 
+import java.io.IOException;
 import java.util.Random;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 
 public class Metodos {
+    
+     public static Clip clip;
+     
     
         public int[] setNumeroCartas(){
         int[] numeros = new int[8];
@@ -36,6 +44,16 @@ public class Metodos {
         return numeros;
     
 }
+        
+        public void sonidoMenu(String sound) {
+        try {
+            clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(getClass().getResourceAsStream(sound)));
+            clip.start();
+        } catch (LineUnavailableException | UnsupportedAudioFileException | IOException e) {
+        }finally{
+        }
+    }
         
         
     
