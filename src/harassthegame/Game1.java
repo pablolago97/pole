@@ -26,10 +26,10 @@ public class Game1 extends javax.swing.JFrame {
     private ImageIcon im2;
     private JButton[] ArrayBoton = new JButton [2];
     private boolean primeraC = false;
-    
+    public static int contador = 0;
     
     public Game1() {
-    initComponents();
+        initComponents();
         ((JPanel) getContentPane()).setOpaque(false);
         ImageIcon imagen = new ImageIcon(this.getClass().getResource("/imagenes_uso_ur/fondo_v.jpg"));
         JLabel fondo = new JLabel();
@@ -38,15 +38,19 @@ public class Game1 extends javax.swing.JFrame {
         fondo.setBounds(0, 0, imagen.getIconWidth(), imagen.getIconHeight());
         this.add(fondo, BorderLayout.CENTER);
         this.setSize(fondo.getWidth(), fondo.getHeight());
-        this.setLocationRelativeTo(null);      
+        this.setLocationRelativeTo(null);
         setCartas();
         
     }
     
     private void seAcabo (){
-        if(!imagen1.isEnabled()&&!imagen2.isEnabled()&&!imagen3.isEnabled()&&!imagen4.isEnabled()&&!imagen5.isEnabled()&&!imagen6.isEnabled()&&!imagen7.isEnabled()&&!imagen8.isEnabled()&&!imagen9.isEnabled())
-        setVisible(false);
         
+        if(!imagen1.isEnabled()&&!imagen2.isEnabled()&&!imagen3.isEnabled()&&!imagen4.isEnabled()&&!imagen5.isEnabled()&&!imagen6.isEnabled()&&!imagen7.isEnabled()&&!imagen8.isEnabled()&&!imagen9.isEnabled()){
+        setVisible(false);
+        HarassTheGame.g2.setVisible(true);
+        
+        }
+
     }
     
     private void setCartas(){
@@ -170,6 +174,7 @@ public class Game1 extends javax.swing.JFrame {
             im2 = (ImageIcon) btn.getDisabledIcon();
             ArrayBoton[1] = btn;
             primeraC = true;
+            HarassTheGame.PUNTUACION+=20;
             
         }
       
@@ -180,6 +185,7 @@ public class Game1 extends javax.swing.JFrame {
                 if(im1.getDescription().compareTo(im2.getDescription())!=0){
                     ArrayBoton[0].setEnabled(true);
                     ArrayBoton[1].setEnabled(true);
+                    if(HarassTheGame.PUNTUACION>10)HarassTheGame.PUNTUACION+=10;
                 }
                 cara = false;
             }
@@ -197,16 +203,16 @@ public class Game1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
         imagen1 = new javax.swing.JButton();
-        imagen4 = new javax.swing.JButton();
-        imagen7 = new javax.swing.JButton();
         imagen2 = new javax.swing.JButton();
         imagen3 = new javax.swing.JButton();
-        imagen5 = new javax.swing.JButton();
         imagen6 = new javax.swing.JButton();
+        imagen5 = new javax.swing.JButton();
+        imagen4 = new javax.swing.JButton();
+        imagen7 = new javax.swing.JButton();
         imagen8 = new javax.swing.JButton();
         imagen9 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -224,40 +230,6 @@ public class Game1 extends javax.swing.JFrame {
         imagen1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 imagen1ActionPerformed(evt);
-            }
-        });
-
-        imagen4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
-        imagen4.setBorder(null);
-        imagen4.setBorderPainted(false);
-        imagen4.setContentAreaFilled(false);
-        imagen4.setFocusable(false);
-        imagen4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
-        imagen4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                imagen4MouseExited(evt);
-            }
-        });
-        imagen4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imagen4ActionPerformed(evt);
-            }
-        });
-
-        imagen7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
-        imagen7.setBorder(null);
-        imagen7.setBorderPainted(false);
-        imagen7.setContentAreaFilled(false);
-        imagen7.setFocusable(false);
-        imagen7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
-        imagen7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                imagen7MouseExited(evt);
-            }
-        });
-        imagen7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imagen7ActionPerformed(evt);
             }
         });
 
@@ -295,6 +267,23 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
+        imagen6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
+        imagen6.setBorder(null);
+        imagen6.setBorderPainted(false);
+        imagen6.setContentAreaFilled(false);
+        imagen6.setFocusable(false);
+        imagen6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen6MouseExited(evt);
+            }
+        });
+        imagen6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imagen6ActionPerformed(evt);
+            }
+        });
+
         imagen5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
         imagen5.setBorder(null);
         imagen5.setBorderPainted(false);
@@ -312,20 +301,37 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        imagen6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
-        imagen6.setBorder(null);
-        imagen6.setBorderPainted(false);
-        imagen6.setContentAreaFilled(false);
-        imagen6.setFocusable(false);
-        imagen6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
-        imagen6.addMouseListener(new java.awt.event.MouseAdapter() {
+        imagen4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
+        imagen4.setBorder(null);
+        imagen4.setBorderPainted(false);
+        imagen4.setContentAreaFilled(false);
+        imagen4.setFocusable(false);
+        imagen4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                imagen6MouseExited(evt);
+                imagen4MouseExited(evt);
             }
         });
-        imagen6.addActionListener(new java.awt.event.ActionListener() {
+        imagen4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imagen6ActionPerformed(evt);
+                imagen4ActionPerformed(evt);
+            }
+        });
+
+        imagen7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso.png"))); // NOI18N
+        imagen7.setBorder(null);
+        imagen7.setBorderPainted(false);
+        imagen7.setContentAreaFilled(false);
+        imagen7.setFocusable(false);
+        imagen7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_w_b/rsz_logoreverso_opt.png"))); // NOI18N
+        imagen7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                imagen7MouseExited(evt);
+            }
+        });
+        imagen7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imagen7ActionPerformed(evt);
             }
         });
 
@@ -363,62 +369,81 @@ public class Game1 extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(imagen7, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(imagen2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(imagen6, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                    .addComponent(imagen3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imagen9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(imagen3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagen6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imagen7, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen8, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imagen9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes_uso_ur/Parejas.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(247, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(199, 199, 199))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(imagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(imagen5, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(imagen2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(265, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(imagen6, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(129, 129, 129))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(imagen7, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(imagen4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(170, 170, 170)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(imagen8, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(imagen3, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(imagen9, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(158, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(173, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(imagen5)
+                    .addComponent(imagen2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(imagen6)
+                        .addGap(29, 29, 29)
+                        .addComponent(imagen3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(imagen7)
+                            .addComponent(imagen9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(113, 113, 113))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(imagen8)
+                        .addGap(44, 44, 44))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(imagen1)
+                .addGap(42, 42, 42)
+                .addComponent(imagen4))
         );
 
         pack();
@@ -426,69 +451,77 @@ public class Game1 extends javax.swing.JFrame {
 
     private void imagen9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen9ActionPerformed
         comprobar(imagen9);
+        
     }//GEN-LAST:event_imagen9ActionPerformed
 
     private void imagen9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen9MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen9MouseExited
 
     private void imagen8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen8ActionPerformed
         comprobar(imagen8);
+        
     }//GEN-LAST:event_imagen8ActionPerformed
 
     private void imagen8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen8MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen8MouseExited
 
     private void imagen6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen6ActionPerformed
         comprobar(imagen6);
+        
     }//GEN-LAST:event_imagen6ActionPerformed
 
     private void imagen6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen6MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen6MouseExited
 
     private void imagen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen5ActionPerformed
         comprobar(imagen5);
+       
     }//GEN-LAST:event_imagen5ActionPerformed
 
     private void imagen5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen5MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen5MouseExited
 
     private void imagen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen3ActionPerformed
         comprobar(imagen3);
+     
     }//GEN-LAST:event_imagen3ActionPerformed
 
     private void imagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen3MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen3MouseExited
 
     private void imagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen2ActionPerformed
         comprobar(imagen2);
+        
     }//GEN-LAST:event_imagen2ActionPerformed
 
     private void imagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen2MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen2MouseExited
 
     private void imagen7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen7ActionPerformed
         comprobar(imagen7);
+        
     }//GEN-LAST:event_imagen7ActionPerformed
 
     private void imagen7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen7MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen7MouseExited
 
     private void imagen4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen4ActionPerformed
         comprobar(imagen4);
+       
     }//GEN-LAST:event_imagen4ActionPerformed
 
     private void imagen4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen4MouseExited
@@ -498,11 +531,12 @@ public class Game1 extends javax.swing.JFrame {
 
     private void imagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imagen1ActionPerformed
         comprobar(imagen1);
+       
     }//GEN-LAST:event_imagen1ActionPerformed
 
     private void imagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagen1MouseExited
         comparar();
-        seAcabo();
+         seAcabo();
     }//GEN-LAST:event_imagen1MouseExited
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -515,6 +549,6 @@ public class Game1 extends javax.swing.JFrame {
     private javax.swing.JButton imagen7;
     private javax.swing.JButton imagen8;
     private javax.swing.JButton imagen9;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
